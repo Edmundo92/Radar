@@ -1,0 +1,188 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include  partials/head.ejs%>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+    </header>
+    <main class="principal">
+
+        <!-- ínico asside esq -->
+        <aside class="options">
+
+            <!-- ínicio - Inserir -->
+            <div class="div-func">
+                <div class="div-coord">
+                    <label for="">Coordenada Cartesiana</label>
+                    <input type="radio" name="coordenada" value="cartesiana" class="cC">
+                </div>
+                <div class="div-coord">
+                    <label for="">Coordenadas Polar</label>
+                    <input type="radio" name="coordenada" value="polar" class="cP">
+                </div>
+                <div class="entrad-dados">
+                    <form action="" id="dadosForm">
+                        <div class="box-coordenadas none cCartesiana">
+                            <div class=""><label for="">X:</label><input type="text" name="valueX"></div>
+                            <div class=""><label for="">Y:</label><input type="text" name="valueY"></div>
+                        </div>
+                        <div class="box-coordenadas none cPolar">
+                            <div class=""><label for="">R:</label><input type="text" name="valueR"></div>
+                            <div class=""><label for="">A:</label><input type="text" name="valueA"></div>
+                        </div>
+                        <div class="box-coordenadas">
+                            <div class=""><label for="">V:</label><input type="text" name="valueV"></div>
+                            <div class=""><label for="">D:</label><input type="text" name="valueD"></div>
+                        </div>
+                    </form>
+                    <button class="btn btn-inserir">Inserir</button>
+                </div>
+            </div>
+            <!-- fim - Inserir -->
+
+
+
+            <!-- ínicio - transladar -->
+            <div class="div-func">
+                <div class="entrad-dados">
+                    <form action="" id="dadosForm">
+                        <div class="box-coordenadas">
+                            <div class=""><label for="">X:</label><input type="text" class="transladarX"></div>
+                            <div class=""><label for="">Y:</label><input type="text" class="transladarY"></div>
+                        </div>
+                    </form>
+                    <button class="btn btn-transladar">Transladar</button>
+                </div>
+            </div>
+            <!-- fim - transladar -->
+
+            <!-- ínicio - escalonar -->
+            <div class="div-func">
+                <div class="entrad-dados">
+                    <form action="" id="dadosForm">
+                        <div class="box-coordenadas">
+                            <div class=""><label for="">X:</label><input type="text" class="escalonarX"></div>
+                            <div class=""><label for="">Y:</label><input type="text" class="escalonarY"></div>
+                        </div>
+                    </form>
+                    <button class="btn btn-escalonar">Escalonar</button>
+                </div>
+            </div>
+            <!-- fim escalonar -->
+
+            <!-- ínicio rotacionar -->
+            <div class="div-func">
+                <div class="entrad-dados">
+                    <form action="" id="dadosForm">
+                        <div class="">
+                            <input type="text" name="" placeholder="Angulo" style="display: block; width: 100%;" class="angulo"></div>
+                        <div class="box-coordenadas">
+                            <div class=""><label for="">X:</label><input type="text" class="rotacionarX"></div>
+                            <div class=""><label for="">Y:</label><input type="text" class="rotacionarY"></div>
+                        </div>
+                    </form>
+                    <button class="btn btn-rotacionar">Rotacionar</button>
+                </div>
+            </div>
+            <!-- fim rotacionarnar -->
+
+        </aside>
+
+        <section class="container">
+            <div class="radar"></div>
+        </section>
+        <aside class="options">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>C</td>
+                        <td>ID</td>
+                        <td>X</td>
+                        <td>Y</td>
+                        <td>R</td>
+                        <td>A</td>
+                        <td>V</td>
+                        <td>D</td>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+
+                </tbody>
+            </table>
+
+            <div class="options relatorio">
+                <h2>Relatório</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody class="lista-relatorio">
+                        
+                    </tbody>
+                </table>
+            </div>
+
+        </aside>
+
+
+        <!-- Funções de rastreamento -->
+        <div class="div-func_rastrear">
+
+            <!-- Distância minima -->
+            <div class="div-func">
+                <div class="entrad-dados">
+                        <div class="box-coordenadas">
+                            <div class=""><label for="">Distância minima</label><input type="text" class="prox_do_aeroporto"></div>
+                        </div>
+                    <button class="btn btn-av_prox_aeroporto">Av Prox ao aeroporto</button>
+                </div>
+            </div>
+            <!-- fim Distância minima -->
+            
+            <!-- Distância minima Aviões proximos -->
+            <div class="div-func">
+                <div class="entrad-dados">
+                    <form action="" id="dadosForm">
+                        <div class="box-coordenadas">
+                            <div class=""><label for="">Distância minima</label><input type="text" class="avProximo_av"></div>
+                        </div>
+                    </form>
+                    <button class="btn btn_Av_Proximos">Av Proximos</button>
+                </div>
+            </div>
+            <!-- fim Distância minima proximos -->
+            
+            
+            <!-- Rota de colisão -->
+            <div class="div-func">
+                <div class="entrad-dados">
+                    <form action="" id="dadosForm">
+                        <div class="box-coordenadas">
+                            <div class=""><label for="">Tempo minimo</label><input type="text" class="rotaColisao"></div>
+                        </div>
+                    </form>
+                    <button class="btn btn_rota-colisao">Em rota de colisão</button>
+                </div>
+            </div>
+            <!-- fim Rota de colisão -->
+
+        </div>
+        <!-- fim Funções de rastreamento -->
+
+    </main>
+
+    <footer class="rodape">
+
+    </footer>
+
+    <% include  partials/scripts.ejs%>
+    
+</body>
+</html>

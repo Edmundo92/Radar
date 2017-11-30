@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    //width: 1340px;
+    background-color: #ebebeb;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+.cabecalho, .rodape{
+    //height: 40px;
+    background-color: white;
+}
+.rodape{
+    clear: both;
+}
+.principal{
+    padding: 10px;
+    height: auto;
+	background-color: #3e3e3e;
+}
+
+.options{
+    width: 220px;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.1);
+    margin-right: 20px;
+	margin-bottom: 6px;
+    padding: 5px;
+}
+.options:nth-child(3){
+    margin: 0 0 0 20px;
+    width: 400px;
+	float: right;
+}
+.canvas{
+    background-color: #fff;
+}
+.relatorio{
+    width: 100%;
+    margin-top: 10px;
+}
+.relatorio h2{
+    text-align: center;
+    background-color: lightgray;
+    color: gray;
+    font-size: 1.1em;
+}
+.container{
+    width: 500px;
+    height: 500px;
+    background-image: url(../images/terra.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    position: relative;
+	left: 9%;
+    box-shadow: 0 0px 0 #c5c5c5, inset 0 0 100px rgba(0, 255,0,.5);
+    overflow: hidden;
+}
+.container:after, .container:before{
+    position: absolute;
+}
+.container:after{
+    content: "";
+    left: 250px;
+    width: 1px;
+    height: 500px;
+    background-color: rgba(0, 255,0,.5);
+}
+.container:before{
+    content: "";
+    top: 250px;
+    height: 1px;
+    width: 500px;
+    background-color: rgba(0, 255,0,.5);
+}
+.options, .container{
+    float: left;
+}
+
+.block{
+    width: 300px;
+    height: 300px;
+    background-color: darkslategrey;
+}
+.div-func{
+	background-color: lightgrey;
+    padding: 5px;	
+	margin-bottom: 5px;
+}
+.div-coord{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+    padding: 0 10px;
+    background-color: #ebebeb;
+    color: grey;
+}
+input[type=radio]{
+    height: 25px;
+    margin-bottom: 5px;
+    background-color: red;
+    border: 1px solid red;
+}
+.btn{
+    display: block;
+    width: 95%;
+    margin: 5px auto;
+    line-height: 2.5;
+    border-radius: 3px;
+    border: 1px solid #3e3e3e;
+    background-color: #3e3e3e;
+    color: gray;
+    cursor: pointer;
+}
+table{
+    width: 100%;
+}
+thead, tbody{
+    color: gray;
+    font-weight: bold;
+    text-align: center;
+}
+thead{
+    background-color: #3e3e3e;
+    border: 1px solid #3e3e3e;
+}
+
+.fundo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.6);
+    display: none;
+}
+
+.inf{
+    width: 80%;
+    height: 200px;
+    position: fixed;
+    top: 30%;
+    left: -100%;
+    z-index: 10;
+    transition: 900ms ease-in-out;
+}
+
+form{
+    padding: 10px;
+}
+.box-coordenadas{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.box-coordenadas input{
+    width: 50px;
+}
+label{
+    margin-right: 3px;
+    font-size: 0.8em;
+}
+.none{
+    display: none;
+}
+.av{
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    position: absolute;
+	border-radius: 50%;
+    z-index: 10;
+}
+.avSize{
+	width: 35px;
+    height: 35px;
+    position: absolute;
+}
+
+.teste{
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    position: absolute;
+    transform: translate(10px, 20px);
+}
+
+
+.radar{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    transform-origin: top left;
+    background: linear-gradient(45deg, #00ff00 0%, transparent 50%);
+    animation: animate 20s linear infinite;
+}
+.radar:after{
+    position: absolute;
+    top: -4px;
+    left: -3px;
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #00ff00;
+}
+
+@keyframes animate{
+    0% { transform:  rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+
+.table{
+    //display: none;
+}
+.div-func_rastrear{
+	width: 700px;
+    height: 105px;
+    margin: auto;
+	clear: left;
+    display: flex;
+}
+.div-func_rastrear .div-func{
+    margin-left: 5px;
+}
+li{
+    list-style: none;
+}
